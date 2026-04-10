@@ -1,0 +1,156 @@
+{
+  "best_trial": 0,
+  "best_value": 1440.6,
+  "best_params": {
+    "n_steps": 2048,
+    "gamma": 0.9694963418984708,
+    "learning_rate": 0.0001561432587684407,
+    "clip_range": 0.17926338970805325,
+    "gae_lambda": 0.9512217760554362,
+    "ent_coef": 0.04107264431916201,
+    "batch_size": 128,
+    "n_epochs": 10
+  },
+  "all_trials": [
+    {
+      "number": 0,
+      "value": 1440.6,
+      "params": {
+        "n_steps": 2048,
+        "gamma": 0.9694963418984708,
+        "learning_rate": 0.0001561432587684407,
+        "clip_range": 0.17926338970805325,
+        "gae_lambda": 0.9512217760554362,
+        "ent_coef": 0.04107264431916201,
+        "batch_size": 128,
+        "n_epochs": 10
+      }
+    },
+    {
+      "number": 1,
+      "value": 385.2,
+      "params": {
+        "n_steps": 2048,
+        "gamma": 0.9737861791144926,
+        "learning_rate": 5.3606373295098156e-05,
+        "clip_range": 0.2117155470351521,
+        "gae_lambda": 0.9173250548150844,
+        "ent_coef": 0.030984979419935256,
+        "batch_size": 256,
+        "n_epochs": 10
+      }
+    },
+    {
+      "number": 2,
+      "value": 385.2,
+      "params": {
+        "n_steps": 3072,
+        "gamma": 0.990136692140873,
+        "learning_rate": 0.00011161297728307608,
+        "clip_range": 0.24715399045974987,
+        "gae_lambda": 0.9553377254483405,
+        "ent_coef": 0.03503968980256634,
+        "batch_size": 128,
+        "n_epochs": 10
+      }
+    },
+    {
+      "number": 3,
+      "value": 412.2,
+      "params": {
+        "n_steps": 2048,
+        "gamma": 0.951627246632639,
+        "learning_rate": 0.00011016616175528139,
+        "clip_range": 0.10793444014699871,
+        "gae_lambda": 0.9295269821749088,
+        "ent_coef": 0.041798942613451726,
+        "batch_size": 128,
+        "n_epochs": 3
+      }
+    },
+    {
+      "number": 4,
+      "value": 371.2,
+      "params": {
+        "n_steps": 5120,
+        "gamma": 0.9752831134310693,
+        "learning_rate": 9.143775369240152e-05,
+        "clip_range": 0.24371221688305156,
+        "gae_lambda": 0.9237182827806425,
+        "ent_coef": 0.04439521457123856,
+        "batch_size": 256,
+        "n_epochs": 10
+      }
+    },
+    {
+      "number": 5,
+      "value": 390.2,
+      "params": {
+        "n_steps": 5120,
+        "gamma": 0.953313160551859,
+        "learning_rate": 0.0004038666241263808,
+        "clip_range": 0.17467565123271697,
+        "gae_lambda": 0.9634141422908604,
+        "ent_coef": 0.02463916864347174,
+        "batch_size": 128,
+        "n_epochs": 10
+      }
+    },
+    {
+      "number": 6,
+      "value": 388.6,
+      "params": {
+        "n_steps": 4096,
+        "gamma": 0.9880585312626459,
+        "learning_rate": 0.00010753857304471186,
+        "clip_range": 0.1307367704274272,
+        "gae_lambda": 0.9282304012781565,
+        "ent_coef": 0.029689359031548825,
+        "batch_size": 64,
+        "n_epochs": 3
+      }
+    },
+    {
+      "number": 7,
+      "value": 394.2,
+      "params": {
+        "n_steps": 5120,
+        "gamma": 0.9917863892013129,
+        "learning_rate": 8.054008552972662e-05,
+        "clip_range": 0.2839543298845686,
+        "gae_lambda": 0.9451018661522393,
+        "ent_coef": 0.032948298634771375,
+        "batch_size": 128,
+        "n_epochs": 5
+      }
+    },
+    {
+      "number": 8,
+      "value": 405.2,
+      "params": {
+        "n_steps": 7168,
+        "gamma": 0.9815422947636391,
+        "learning_rate": 6.235440908154627e-05,
+        "clip_range": 0.1514685598659247,
+        "gae_lambda": 0.9496524543674413,
+        "ent_coef": 0.02324084963741415,
+        "batch_size": 64,
+        "n_epochs": 5
+      }
+    },
+    {
+      "number": 9,
+      "value": 400.7,
+      "params": {
+        "n_steps": 6144,
+        "gamma": 0.9577682867645323,
+        "learning_rate": 0.0002870439654336332,
+        "clip_range": 0.17522602435640403,
+        "gae_lambda": 0.9847452583161307,
+        "ent_coef": 0.04294558533719003,
+        "batch_size": 256,
+        "n_epochs": 3
+      }
+    }
+  ]
+}
