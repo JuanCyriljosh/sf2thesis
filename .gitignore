@@ -1,0 +1,4 @@
+sf2venv/
+__pycache__/
+.claude/
+logs_adaptive/
