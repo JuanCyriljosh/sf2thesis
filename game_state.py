@@ -82,6 +82,12 @@ class GameState:
         self.steps_since_damage_taken = 0
         self.step_count = 0
 
+        # Combo tracking — consecutive hits within a short window
+        self.combo_count = 0            # current combo length
+        self.combo_window = 0           # frames since last hit in combo
+        self.best_combo = 0             # longest combo this episode
+        self.COMBO_WINDOW_MAX = 30      # max frames between hits to count as combo
+
     def update(self, info: dict):
         """Update state from the retro info dict. Call once per step."""
         self.step_count += 1
@@ -115,6 +121,21 @@ class GameState:
             self.steps_since_damage_taken = 0
         else:
             self.steps_since_damage_taken += 1
+
+        # ---- Combo detection ----
+        if self.damage_dealt > 0:
+            if self.combo_window > 0 and self.combo_window <= self.COMBO_WINDOW_MAX:
+                # Consecutive hit within window — extend combo
+                self.combo_count += 1
+            else:
+                # First hit or gap too long — start new combo
+                self.combo_count = 1
+            self.combo_window = 0
+            self.best_combo = max(self.best_combo, self.combo_count)
+        else:
+            self.combo_window += 1
+            if self.combo_window > self.COMBO_WINDOW_MAX:
+                self.combo_count = 0  # combo dropped
 
         # ---- Block detection ----
         # Chip damage (1 to CHIP_DAMAGE_MAX) indicates a blocked attack;
@@ -180,4 +201,6 @@ class GameState:
             "successful_dodge": self.successful_dodge,
             "total_blocks": self.total_blocks,
             "total_dodges": self.total_dodges,
+            "combo_count": self.combo_count,
+            "best_combo": self.best_combo,
         }

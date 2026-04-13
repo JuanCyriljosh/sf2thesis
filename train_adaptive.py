@@ -160,7 +160,7 @@ def main():
     parser.add_argument("--n-trials", type=int, default=10,
                         help="Number of Optuna trials (default: 10)")
     parser.add_argument("--timesteps", type=int, default=1000000,
-                        help="Timesteps per training run (default: 500000)")
+                        help="Timesteps per training run (default: 1000000)")
     parser.add_argument("--final-timesteps", type=int, default=None,
                         help="Timesteps for final training (default: same as --timesteps)")
     parser.add_argument("--n-envs", type=int, default=4,

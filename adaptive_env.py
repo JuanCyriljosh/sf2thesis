@@ -99,6 +99,7 @@ class AdaptiveStreetFighter(gym.Env):
         self.w_lose_round = -40.0      # moderate — don't crush early learning
         self.w_block = 5.0             # reward defensive play
         self.w_dodge = 8.0             # reward skillful dodges
+        self.w_combo = 3.0             # reward per hit in a combo (scales with length)
         self.w_rule_adj = 1.0
 
         # Gate tracking (per-episode)
@@ -292,7 +293,11 @@ class AdaptiveStreetFighter(gym.Env):
         if gs.successful_dodge:
             reward += self.w_dodge
 
-        # 4. Rule-engine adjustment (always active, independent of gate)
+        # 4. Combo bonus — scales with combo length to reward multi-hit sequences
+        if gs.combo_count >= 2:
+            reward += self.w_combo * gs.combo_count
+
+        # 5. Rule-engine adjustment (always active, independent of gate)
         reward += self.w_rule_adj * rule_out.reward_adjustment
 
         return reward
